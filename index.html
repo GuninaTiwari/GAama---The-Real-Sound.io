@@ -1,0 +1,680 @@
+ <!DOCTYPE html>
+<html>
+<head>
+	<title>GAama - The Real Sound</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="shortcut icon" type="image/x-icon" href="media/logo.png" />
+</head>
+
+<body background="media/logo.png" >
+   <div class="container">
+     
+  <div class="navbar">
+           <img src= "media/logo.png" class= "logo" width="5">
+           <ul>
+              
+           
+            <li><a href="#home">Home </a></li>
+            <li><a href="#player">Music Player</a></li>
+            <li><a href="#playing">Download</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="mailto:gaamatherealone@gmail.com">Contact</a></li>
+           
+           </ul>   
+          
+       </div> 
+       <br>
+
+<span id="home">
+       <div class = "content">
+         <div class= "left-col">
+            <a href="#playing"> <h1> THE <br>REAL <br>SOUND </h1></a>
+           
+         </div>
+         <div class= "right-col">
+             <p>Click Here To Play</p>
+             <img src="media/play.png" id="icon">
+            
+         </div>   
+        
+            </div>
+         </div>  
+ <audio id="mySong">
+     <source src="music/We are bulletproof.mp3" type="audio/mp3">
+ </audio>
+</div>
+</div>
+</span>
+
+
+  <div class="main" id="player">
+  	<!--p id="logo"><i class="fa fa-music"></i>Music</p-->
+    
+    <!--- left part --->
+     <div class="left">
+
+      <!--- song img --->
+      <img id="track_image" class="inverted">
+         <div class="volume">
+            <p id="volume_show">90</p>
+            <i class="fa fa-volume-up" aria-hidden="true" onclick="mute_sound()" id="volume_icon"></i>
+            <input type="range" min="0" max="100" value="90" onchange="volume_change()" id="volume">  
+         </div>
+
+     </div>
+ 
+
+     <!--- right part --->
+  	 <div class="right">
+
+        <!--div class="show_song_no">
+          <p id="present">1</p>
+          <p>/</p>
+          <p id="total">5</p>
+        </div-->
+
+       <!--- song title & artist name --->
+      <p id="title">title.mp3</p>
+      <p id="artist">Artist name</p>
+
+      <!--- middle part --->
+  	 	<div class="middle">
+  	       <button onclick="previous_song()" id="pre"><i class="fa fa-step-backward" aria-hidden="true"></i></button>
+      	   <button onclick="justplay()" id="play"><i class="fa fa-play" aria-hidden="true"></i></button>
+  	       <button onclick="next_song()" id="next"><i class="fa fa-step-forward" aria-hidden="true"></i></button>
+  	   </div>
+
+       <!--- song duration part --->
+        <div class="duration">
+           <input type="range" min="0" max="100" value="0" id="duration_slider" onchange="change_duration()">
+        </div>
+           <!--button id="auto" onclick="autoplay_switch()">Auto play <i class="fa fa-circle-o-notch" aria-hidden="true"></i></button-->
+  	</div>
+
+
+  </div>
+
+  <div plasma>
+   <img src="media/anime.jpg" width=100% height="450px">
+  </div>
+<br><br><br>
+  <div plasm >
+      <fieldset>
+         <div class="down" id="playing">
+            <ul>
+       <li><a href="#playing"><h1> Click Here To Listen or Download Tracks </h1> </li></a>
+       <li><h4>In case any link isn't working or facing any kind of issues you can directly contact us via mail. </li>
+         <li> In order to switch to the Dark Mode , Press 'Enter' key</li>
+      </ul>
+      </div>
+    </fieldset>
+                      
+   </div>
+   <br><br>
+
+  
+      <div class="download">
+      <fieldset >
+      <ul>
+       <li><a href="boy with luv.html"><h3> Boy with love ‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎(Click here) </h3></li>
+       <li>Play</li> </a>
+       <li><a href="https://drive.google.com/file/d/12IHSlHIOMCBdULyWy1SrwAdYN7_zvujt/view?usp=drivesdk" target="_blank" >Download</a></li>
+      </ul>
+   </fieldset>
+   <fieldset>
+      <ul>
+       <li><a href="stay gold.html"><h3> Stay Gold (Click here)‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎ </h3></li>
+       <li>Play</li> </a>
+       <li><a href="https://drive.google.com/file/d/1-tWWBD5HGkLPGOzaOEDRhBmx6JS5OQfn/view?usp=drivesdk">Download</a></li>
+      </ul>
+   </fieldset>
+   
+   <fieldset>
+      <ul>
+       <li><a href="mikrokosmos.html"><h3> Mikrokosmos (Click here)‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎ </h3></li>
+       <li>Play</li> </a>
+       <li><a href="https://drive.google.com/file/d/11B4-Xn_XzATz-NdT6J7mmwaOiVGFE9vD/view?usp=drivesdk">Download</a></li>
+      </ul>
+   </fieldset>
+  
+      </div>
+      
+      <div class="download">
+         <fieldset>
+            <ul>
+             <li><a href="dynamite.html"><h3> Dynamite (Click here)‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎ </h3></li>
+             <li>Play</li> </a>
+             <li><a href="https://drive.google.com/file/d/129m2U_9D_C9vXCZRFAk38kJXXWuJ6f4W/view?usp=drivesdk">Download</a></li>
+            </ul>
+         </fieldset>
+   
+      <fieldset>
+         <ul>
+          <li><a href="Euphoria.html"><h3> Euphoria‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎   (Click here) </h3></li>
+          <li>Play</li> </a>
+          <li><a href="https://drive.google.com/file/d/11lMLq3KqpLQ2NWz2Dvoc57ObPn5jK9nI/view?usp=drivesdk">Download</a></li>
+         </ul>
+      </fieldset>
+      <fieldset>
+         <ul>
+          <li><a href="Jamais Vu.html"><h3> Jamais Vu  (Click here) </h3></li>
+          <li>Play</li> </a>
+          <li><a href="https://drive.google.com/file/d/11kZf4uqCSIXef4rdI69PH_dDWcE-BF9k/view?usp=drivesdk">Download</a></li>
+         </ul>
+      </fieldset>
+         </div>
+         <div class="download">
+            <fieldset>
+               <ul>
+                <li><a href="Blue side.html"><h3> Blue Side (Click here) ‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎ </h3></li>
+                <li>Play</li> </a>
+                <li><a href="https://drive.google.com/file/d/12Hb4xD9eu1kxfTHWW6IhMt-cwNv_3hQo/view?usp=drivesdk">Download</a></li>
+               </ul>
+            </fieldset>
+         <fieldset>
+            <ul>
+             <li><a href="Promise.html"><h3> Promise‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎ (Click here) - </h3></li>
+             <li>Play</li> </a>
+             <li><a href="https://drive.google.com/file/d/1184ZntA08NjGaPvIczb7aoX0ygyylfs-/view?usp=drivesdk">Download</a></li>
+            </ul>
+         </fieldset>
+         <fieldset>
+            <ul>
+             <li><a href="scenery.html"><h3> Scenery (Click here) - </h3></li>
+             <li>Play</li> </a>
+             <li><a href="https://drive.google.com/file/d/10PTn7GG1aYy5P00g3QZWFDuc4Y1DJU2Y/view?usp=drivesdk">Download</a></li>
+            </ul>
+         </fieldset>
+            </div>
+            <div class="download">
+               <fieldset>
+               <ul>
+                <li><a href="Serendipity.html"><h3> Serendipity ‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎(Click here)  </h3></li>
+                <li>Play</li> </a>
+                <li><a href="https://drive.google.com/file/d/10QRQ0yW0M7-25Na8LsVlTo6zfJksxPAX/view?usp=drivesdk">Download</a></li>
+               </ul>
+            </fieldset>
+         
+            <fieldset>
+               <ul>
+                <li><a href="so far away.html"><h3> So far Away ‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎(Click here)  </h3></li>
+                <li>Play</li> </a>
+                <li><a href="https://drive.google.com/file/d/10FCrr-9opxl0RFLeRwUKoO1AZ2RYflXd/view?usp=drivesdk">Download</a></li>
+               </ul>
+            </fieldset>
+            <fieldset>
+               <ul>
+                <li><a href="Spring day.html"><h3> Spring Day ‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎(Click here)  </h3></li>
+                <li>Play</li> </a>
+                <li><a href="https://drive.google.com/file/d/1-qmISF1o7kZnd3pFvhp4n0fsLFay87L_/view?usp=drivesdk">Download</a></li>
+               </ul>
+            </fieldset>
+               </div>
+               <div class="download">
+                  <fieldset>
+                     <ul>
+                      <li><a href="we are bulletproof.html"><h3> We are Bulletproof‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎ (Click here) </h3></li>
+                      <li>Play</li> </a>
+                      <li><a href="https://drive.google.com/file/d/1-K5WV5JqxL9CmcixnmWkb8m0JEJMZVSQ/view?usp=drivesdk">Download</a></li>
+                     </ul>
+                  </fieldset>
+            
+               <fieldset>
+                  <ul>
+                   <li><a href="still with you.html"><h3> Still with You ‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎ (Click here) </h3></li>
+                   <li>Play</li> </a>
+                   <li><a href="https://drive.google.com/file/d/10-Ez_BGmikzu-3weG0U3x3QXeFV30JAb/view?usp=drivesdk">Download</a></li>
+                  </ul>
+               </fieldset>
+               <fieldset>
+                  <ul>
+                   <li><a href="sweet night.html"><h3> Sweet Night ‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎(Click here)  </h3></li>
+                   <li>Play</li> </a>
+                   <li><a href="https://drive.google.com/file/d/1-rOHE2D3kZ8OJxfZxe1pVo_gRqQFfvqR/view?usp=drivesdk">Download</a></li>
+                  </ul>
+               </fieldset>
+                  </div>
+                  <div class="download">
+                     <fieldset>
+                     <ul>
+                      <li><a href="the truth untold.html"><h3> The Truth Untold (Click here)‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎ </h3></li>
+                      <li>Play</li> </a>
+                      <li><a href="https://drive.google.com/file/d/1-oDXFOnna_3ZSvoFdAap9cQSRkwJTXWW/view?usp=drivesdk">Download</a></li>
+                     </ul>
+                  </fieldset>
+               
+                  <fieldset>
+                     <ul>
+                      <li><a href="tokyo.html"><h3> Tokyo by RM (Click here) ‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎ </h3></li>
+                      <li>Play</li> </a>
+                      <li><a href="https://drive.google.com/file/d/1-jlTereCCByHzmcQLGiu9DCxvJp95Ywz/view?usp=drivesdk">Download</a></li>
+                     </ul>
+                  </fieldset>
+                  <fieldset>
+                     <ul>
+                      <li><a href="tonight.html"><h3> Tonight (Click here) ‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎-  </h3></li>
+                      <li>Play</li> </a>
+                      <li><a href="https://drive.google.com/file/d/1-b4qMQsk6qISMmBK2Tes92znoZ0jyq9y/view?usp=drivesdk">Download</a></li>
+                     </ul>
+                  </fieldset>
+                     </div>
+                     <div class="download">
+                        <fieldset>
+                        <ul>
+                         <li><a href="winter bear.html"><h3> Winter Bear (Click here)‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎ </h3></li>
+                         <li>Play</li> </a>
+                         <li><a href="https://drive.google.com/file/d/106jj-ln0xBkW_d9LMX2kzSO_LxFHhGHt/view?usp=drivesdk">Download</a></li>
+                        </ul>
+                     </fieldset>
+                  
+                     <fieldset>
+                        <ul>
+                         <li><a href="zero o clocl.html"><h3> Zero O Clock (Click here) ‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎ </h3></li>
+                         <li>Play</li> </a>
+                         <li><a href="https://drive.google.com/file/d/1-FCJMZtbMIn8WZS43RyNpwrTLhFYw8nB/view?usp=drivesdk">Download</a></li>
+                        </ul>
+                     </fieldset>
+                     <fieldset>
+                        <ul>
+                         <li><a href="four o clock.html"><h3> Four O' Clock (Click here)‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎ </h3></li>
+                         <li>Play</li> </a>
+                         <li><a href="https://drive.google.com/file/d/12JYsyJa-p3saJFyiPKjKl4kK92tf4AwY/view?usp=drivesdk">Download</a></li>
+                        </ul>
+                     </fieldset>
+                        </div>
+
+                        <div class="download">
+                           <fieldset>
+                           <ul>
+                            <li><a href="airplane pt2.html"><h3> Airplane pt2 (Click here)‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎ </h3></li>
+                            <li>Play</li> </a>
+                            <li><a href="https://drive.google.com/file/d/12JslcS_Y3fY2_rNcn3haB66UrIcYCTyL/view?usp=drivesdk">Download</a></li>
+                           </ul>
+                        </fieldset>
+                     
+                        <fieldset>
+                           <ul>
+                            <li><a href="anpaman.html"><h3> Anpaman (Click here) ‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎ </h3></li>
+                            <li>Play</li> </a>
+                            <li><a href="https://drive.google.com/file/d/12d-enSRQ8X1zXHItX6zRAMfJoCvVdkLw/view?usp=drivesdk">Download</a></li>
+                           </ul>
+                        </fieldset>
+                        <fieldset>
+                           <ul>
+                            <li><a href="Best of me.html"><h3> Best of Me (Click here) ‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎ </h3></li>
+                            <li>Play</li> </a>
+                            <li><a href="https://drive.google.com/file/d/12VFVkST8B1-bW8TmDlDV5IU3IkgxokNO/view?usp=drivesdk">Download</a></li>
+                           </ul>
+                        </fieldset>
+                           </div>
+                           <div class="download">
+                              <fieldset>
+                              <ul>
+                               <li><a href="blood sweat tears.html"><h3> Blood Sweat and tears‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎ </h3></li>
+                               <li>Play</li> </a>
+                               <li><a href="https://drive.google.com/file/d/12HDe-NEjC5qDIkST3y00hJztf5xLyVv2/view?usp=drivesdk">Download</a></li>
+                              </ul>
+                           </fieldset>
+                        
+                           <fieldset>
+                              <ul>
+                               <li><a href="boy in love.html"><h3> Boy in Luv (Click here) ‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎ </h3></li>
+                               <li>Play</li> </a>
+                               <li><a href="https://drive.google.com/file/d/12WrBJCP_pc00KcZlotx6Qq5iEaCw9jRb/view?usp=drivesdk">Download</a></li>
+                              </ul>
+                           </fieldset>
+                           <fieldset>
+                              <ul>
+                               <li><a href="boys with fun.html"><h3> Boys with fun ‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎(Click here) </h3></li>
+                               <li>Play</li> </a>
+                               <li><a href="https://drive.google.com/file/d/12IHSlHIOMCBdULyWy1SrwAdYN7_zvujt/view?usp=drivesdk">Download</a></li>
+                              </ul>
+                           </fieldset>
+                              </div>
+                              <div class="download">
+                                 <fieldset>
+                                 <ul>
+                                  <li><a href="danger.html"><h3> Danger - BTS(Click here)‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎ </h3></li>
+                                  <li>Play</li> </a>
+                                  <li><a href="https://drive.google.com/file/d/125G8-WyzyTOpqZpgft4FLG-bXsA8Hss0/view?usp=drivesdk">Download</a></li>
+                                 </ul>
+                              </fieldset>
+                           
+                              <fieldset>
+                                 <ul>
+                                  <li><a href="dna.html"><h3> DNA - BTS (Click here) ‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎ </h3></li>
+                                  <li>Play</li> </a>
+                                  <li><a href="https://drive.google.com/file/d/11lKWoYnLp9TRiPVM5I1Bz-Txa1IFmsQk/view?usp=drivesdk">Download</a></li>
+                                 </ul>
+                              </fieldset>
+                              <fieldset>
+                                 <ul>
+                                  <li><a href="dope.html"><h3> Dope - BTS  (Click here) ‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎ </h3></li>
+                                  <li>Play</li> </a>
+                                  <li><a href="https://drive.google.com/file/d/11uGlNSsBzEd8Z3eBvBUTyx6v_rXRpGv6/view?usp=drivesdk">Download</a></li>
+                                 </ul>
+                              </fieldset>
+                                 </div>
+                                 <div class="download">
+                                    <fieldset>
+                                       <ul>
+                                        <li><a href="butterfly.html"><h3> Butterfly   ‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎(Click here) - </h3></li>
+                                        <li>Play</li> </a>
+                                        <li><a href="https://drive.google.com/file/d/11tPPPcPmxtAOhxOVKSsg7EGB2EeIAmRY/view?usp=drivesdk">Download</a></li>
+                                       </ul>
+                                    </fieldset>
+                              
+                                 <fieldset>
+                                    <ul>
+                                     <li><a href="fake love.html"><h3> Fake love (Click here) ‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎ </h3></li>
+                                     <li>Play</li> </a>
+                                     <li><a href="https://drive.google.com/file/d/11xqvIR2Tlfac856xyBVgwNeqOPgyuDyx/view?usp=drivesdk">Download</a></li>
+                                    </ul>
+                                 </fieldset>
+                                 <fieldset>
+                                    <ul>
+                                     <li><a href="fire.html"><h3> Fire - BTS (Click here) ‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎ </h3></li>
+                                     <li>Play</li> </a>
+                                     <li><a href="https://drive.google.com/file/d/11V4lm1zhstsIGdlVibeWLMdFghDVH7LI/view?usp=drivesdk">Download</a></li>
+                                    </ul>
+                                 </fieldset>
+                                    </div>
+                                    <div class="download">
+                                       <fieldset>
+                                       <ul>
+                                        <li><a href="friends.html"><h3> Friends - BTS (Click here)‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎ </h3></li>
+                                        <li>Play</li> </a>
+                                        <li><a href="https://drive.google.com/file/d/11FyNgqA1CP2CNv6lCcqp2T_VhArvRUVY/view?usp=drivesdk">Download</a></li>
+                                       </ul>
+                                    </fieldset>
+                                 
+                                    <fieldset>
+                                       <ul>
+                                        <li><a href="go go.html"><h3> Go Go - BTS (Click here) ‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎ </h3></li>
+                                        <li>Play</li> </a>
+                                        <li><a href="https://drive.google.com/file/d/11UuICyxr6dBeG2eG6-RDoQYsQEAri0z3/view?usp=drivesdk">Download</a></li>
+                                       </ul>
+                                    </fieldset>
+                                    <fieldset>
+                                       <ul>
+                                        <li><a href="home.html"><h3> Home - BTS (Click here) ‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎ </h3></li>
+                                        <li>Play</li> </a>
+                                        <li><a href="https://drive.google.com/file/d/11iWop0RpPkPGbE9qJlffLyaRucy7uOkq/view?usp=drivesdk">Download</a></li>
+                                       </ul>
+                                    </fieldset>
+                                       </div>
+                                       <div class="download">
+                                          <fieldset>
+                                          <ul>
+                                           <li><a href="danger.html"><h3> Danger - BTS(Click here)‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎ </h3></li>
+                                           <li>Play</li> </a>
+                                           <li><a href="https://drive.google.com/file/d/125G8-WyzyTOpqZpgft4FLG-bXsA8Hss0/view?usp=drivesdk">Download</a></li>
+                                          </ul>
+                                       </fieldset>
+                                    
+                                       <fieldset>
+                                          <ul>
+                                           <li><a href="dna.html"><h3> DNA - BTS (Click here) ‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎ </h3></li>
+                                           <li>Play</li> </a>
+                                           <li><a href="https://drive.google.com/file/d/11lKWoYnLp9TRiPVM5I1Bz-Txa1IFmsQk/view?usp=drivesdk">Download</a></li>
+                                          </ul>
+                                       </fieldset>
+                                       <fieldset>
+                                          <ul>
+                                           <li><a href="dope.html"><h3> Dope - BTS  (Click here) ‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎ </h3></li>
+                                           <li>Play</li> </a>
+                                           <li><a href="https://drive.google.com/file/d/11uGlNSsBzEd8Z3eBvBUTyx6v_rXRpGv6/view?usp=drivesdk">Download</a></li>
+                                          </ul>
+                                       </fieldset>
+                                          </div>
+                                       <div class="download">
+                                          <fieldset>
+                                          <ul>
+                                           <li><a href="i need you.html"><h3> I need you (Click here)‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎ </h3></li>
+                                           <li>Play</li> </a>
+                                           <li><a href="https://drive.google.com/file/d/11W5-qoKmVWPJXGfb_sZb3ryjAOrKRhpZ/view?usp=drivesdk">Download</a></li>
+                                          </ul>
+                                       </fieldset>
+                                    
+                                       <fieldset>
+                                          <ul>
+                                           <li><a href="idol.html"><h3> Idol - BTS (Click here) ‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎ </h3></li>
+                                           <li>Play</li> </a>
+                                           <li><a href="https://drive.google.com/file/d/10ZSuaAc2L5gpHmP910tvC6OG5-NoVhMg/view?usp=drivesdk">Download</a></li>
+                                          </ul>
+                                       </fieldset>
+                                       <fieldset>
+                                          <ul>
+                                           <li><a href="jump.html"><h3> Jump - BTS (Click here) ‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎ </h3></li>
+                                           <li>Play</li> </a>
+                                           <li><a href="https://drive.google.com/file/d/11fMu-Z-xb9aMcnwoWYDVv3Qz4E_vb_Wg/view?usp=drivesdk">Download</a></li>
+                                          </ul>
+                                       </fieldset>
+                                          </div>
+                                          <div class="download">
+                                             <fieldset>
+                                             <ul>
+                                              <li><a href="pied piper.html"><h3> Pied Piper (Click here)‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎ </h3></li>
+                                              <li>Play</li> </a>
+                                              <li><a href="https://drive.google.com/file/d/10tDn8btTAc3u2TG4oh6yHg2J2EB7Ee3P/view?usp=drivesdk">Download</a></li>
+                                             </ul>
+                                          </fieldset>
+                                       
+                                          <fieldset>
+                                             <ul>
+                                              <li><a href="run.html"><h3>Run - BTS (Click here) ‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎ </h3></li>
+                                              <li>Play</li> </a>
+                                              <li><a href="https://drive.google.com/file/d/10Y2JiEGvPGE2Jk4IqMzk3Kyx1tJgyN0z/view?usp=drivesdk">Download</a></li>
+                                             </ul>
+                                          </fieldset>
+                                          <fieldset>
+                                             <ul>
+                                              <li><a href="save me.html"><h3> Save Me (Click here) ‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎ </h3></li>
+                                              <li>Play</li> </a>
+                                              <li><a href="https://drive.google.com/file/d/10QUwtZoxrqvoDOGKpU46rPYbCu0j6G9V/view?usp=drivesdk">Download</a></li>
+                                             </ul>
+                                          </fieldset>
+                                             </div>
+                                          <div class="download">
+                                             <fieldset>
+                                             <ul>
+                                              <li><a href="make it right.html"><h3> Make it right (Click here)‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎ </h3></li>
+                                              <li>Play</li> </a>
+                                              <li><a href="https://drive.google.com/file/d/11PtiKy_GPZifIHT_PHNALbv1wc3v_u2e/view?usp=drivesdk">Download</a></li>
+                                             </ul>
+                                          </fieldset>
+                                       
+                                          <fieldset>
+                                             <ul>
+                                              <li><a href="mic drop.html"><h3> Mic drop (Click here) ‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎ </h3></li>
+                                              <li>Play</li> </a>
+                                              <li><a href="https://drive.google.com/file/d/10ludrHqUjtQyUHcoCZREuKkRmWBn8Bku/view?usp=drivesdk">Download</a></li>
+                                             </ul>
+                                          </fieldset>
+                                          <fieldset>
+                                             <ul>
+                                              <li><a href="no more dream.html"><h3> No more Dream (Click here) ‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎ </h3></li>
+                                              <li>Play</li> </a>
+                                              <li><a href="https://drive.google.com/file/d/11B-mpEOhSTHFKtX071KF5vZnVfniYcyh/view?usp=drivesdk">Download</a></li>
+                                             </ul>
+                                          </fieldset>
+                                             </div>
+
+                                                <div class="download">
+                                                   <fieldset>
+                                                   <ul>
+                                                    <li><a href="no.html"><h3> No - BTS (Click here)‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎ </h3></li>
+                                                    <li>Play</li> </a>
+                                                    <li><a href="https://drive.google.com/file/d/11-gS4KyKMSgAwXxzYkQ9RcKvAFD2AQ9m/view?usp=drivesdk">Download</a></li>
+                                                   </ul>
+                                                </fieldset>
+                                             
+                                                <fieldset>
+                                                   <ul>
+                                                    <li><a href="not today.html"><h3> Not Today (Click here) ‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎ </h3></li>
+                                                    <li>Play</li> </a>
+                                                    <li><a href="https://drive.google.com/file/d/10ZSuaAc2L5gpHmP910tvC6OG5-NoVhMg/view?usp=drivesdk">Download</a></li>
+                                                   </ul>
+                                                </fieldset>
+                                                <fieldset>
+                                                   <ul>
+                                                    <li><a href="on.html"><h3> On - BTS (Click here) ‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎ </h3></li>
+                                                    <li>Play</li> </a>
+                                                    <li><a href="https://drive.google.com/file/d/10uKV0YrMMlMeVWeuyK5KCPVrGrTr8xrQ/view?usp=drivesdk">Download</a></li>
+                                                   </ul>
+                                                </fieldset>
+                                                   </div>
+                                                   <div class="download">
+                                                      <fieldset>
+                                                      <ul>
+                                                       <li><a href="pied piper.html"><h3> Pied Piper (Click here)‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎ </h3></li>
+                                                       <li>Play</li> </a>
+                                                       <li><a href="https://drive.google.com/file/d/10tDn8btTAc3u2TG4oh6yHg2J2EB7Ee3P/view?usp=drivesdk">Download</a></li>
+                                                      </ul>
+                                                   </fieldset>
+                                                
+                                                   <fieldset>
+                                                      <ul>
+                                                       <li><a href="run.html"><h3>Run - BTS (Click here) ‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎ </h3></li>
+                                                       <li>Play</li> </a>
+                                                       <li><a href="https://drive.google.com/file/d/10Y2JiEGvPGE2Jk4IqMzk3Kyx1tJgyN0z/view?usp=drivesdk">Download</a></li>
+                                                      </ul>
+                                                   </fieldset>
+                                                   <fieldset>
+                                                      <ul>
+                                                       <li><a href="save me.html"><h3> Save Me (Click here) ‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎ </h3></li>
+                                                       <li>Play</li> </a>
+                                                       <li><a href="https://drive.google.com/file/d/10QUwtZoxrqvoDOGKpU46rPYbCu0j6G9V/view?usp=drivesdk">Download</a></li>
+                                                      </ul>
+                                                   </fieldset>
+                                                      </div>
+                                                      <div class="download">
+                                                         <fieldset>
+                                                         <ul>
+                                                          <li><a href="silver spoon.html"><h3> Silver Spoom (Click here)‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎ </h3></li>
+                                                          <li>Play</li> </a>
+                                                          <li><a href="https://drive.google.com/file/d/10VC0xRZQQ1kphvKeEoq9zuEA5eb4vVne/view?usp=drivesdk">Download</a></li>
+                                                         </ul>
+                                                      </fieldset>
+                                                   
+                                                      <fieldset>
+                                                         <ul>
+                                                          <li><a href="so what.html"><h3> So What (Click here) ‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎ </h3></li>
+                                                          <li>Play</li> </a>
+                                                          <li><a href="https://drive.google.com/file/d/10PBFNtGMgUh4WqRKP6OWWMbPjVoIZQYX/view?usp=drivesdk">Download</a></li>
+                                                         </ul>
+                                                      </fieldset>
+                                                      <fieldset>
+                                                         <ul>
+                                                          <li><a href="Telepathy.html"><h3> Telepathy (Click here) ‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎ </h3></li>
+                                                          <li>Play</li> </a>
+                                                          <li><a href="https://drive.google.com/file/d/13OKov-5rNJXtVG3zWFKTccxYu5pKfcuO/view?usp=drivesdk">Download</a></li>
+                                                         </ul>
+                                                      </fieldset>
+                                                         </div>
+                                                         <div class="download">
+                                                            <fieldset>
+                                                            <ul>
+                                                             <li><a href="make it right.html"><h3> Make it right (Click here)‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎ </h3></li>
+                                                             <li>Play</li> </a>
+                                                             <li><a href="https://drive.google.com/file/d/11PtiKy_GPZifIHT_PHNALbv1wc3v_u2e/view?usp=drivesdk">Download</a></li>
+                                                            </ul>
+                                                         </fieldset>
+                                                      
+                                                         <fieldset>
+                                                            <ul>
+                                                             <li><a href="mic drop.html"><h3> Mic drop (Click here) ‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎ </h3></li>
+                                                             <li>Play</li> </a>
+                                                             <li><a href="https://drive.google.com/file/d/10ludrHqUjtQyUHcoCZREuKkRmWBn8Bku/view?usp=drivesdk">Download</a></li>
+                                                            </ul>
+                                                         </fieldset>
+                                                         <fieldset>
+                                                            <ul>
+                                                             <li><a href="no more dream.html"><h3> No more Dream (Click here) ‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎ </h3></li>
+                                                             <li>Play</li> </a>
+                                                             <li><a href="https://drive.google.com/file/d/11B-mpEOhSTHFKtX071KF5vZnVfniYcyh/view?usp=drivesdk">Download</a></li>
+                                                            </ul>
+                                                         </fieldset>
+                                                            </div>
+                                                
+          
+    
+                      
+   </div>
+
+   <br><br><br>
+   <fieldset id="about">
+      <br><p style="text-align:center;">
+          <button type="ABOUT" value="ABOUT"align="right"> 
+          <a href = "ABC.html" target="blank" align="right">
+            <h5>ABOUT</h5>
+          </a>
+          </button> 
+          <br><br>
+          
+          <p style="text-align:center;">
+          <img src="media/1.jpg" title ="Whatsapp messenger"height="300" width="805" class="inverted">
+          <br><br>
+          
+          <p style="font-family:georgian,garamond,serif;font-size:20px;font-style:italic;color: aliceblue ;border: #5f5f5f; ">
+          GAama - The Real Sound is a newly launched music label that continues to pioneer new paths
+          driven by a strong belief in music and ceaseless support from fans.
+          
+          
+          GAama strives to create music heretofore unseen in the world through its inimitable way, creating the music
+          that symbolizes an era that can resonate with fans across the world.
+          
+          
+          Artists under the label includes the members of BTS - Jungkook, V ,Suga, Jimin, Jin, RM , J-Hope .
+          </p><br>
+          
+          <p style="font-family:georgian,garamond,serif;font-size:20px;font-style:italic; color: antiquewhite;">
+          GAama - The Real Sound </p>
+          
+          </a>
+          
+          <div class="contbar">
+            <img src= "media/logo.png" class= "logo">
+            <ul>
+             <li><a href="https://www.instagram.com/bts.bighitofficial/"><img src="media/ig.jpeg" width="20px" height="20px"></a></li>
+             <li><a href=" https://www.facebook.com/bangtan.official?refsrc=http%3A%2F%2Fwww.google.com%2F&_rdr"><img src="media/fb.png" width="20px" height="20px"></a></li>
+             <li><a href=" https://youtube.com/c/BANGTANTV"><img src="media/youtube.png" width="20px" height="20px"></a></li>
+             <li><a href=" https://open.spotify.com/playlist/5E9IMfDY7V263jchACA18Q?si=7zDzqA4IT9aheMNfula3qA&utm_source=copy-link"><img src="media/spotify.png" width="20px" height="20px"></a></li>
+             <li><a href="https://mobile.twitter.com/BTS_twt?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><img src="media/twitterr.jpg" width="20px" height="20px"></a></li>
+             <!--gaamatherealone@gmail.com-->
+            </ul>    
+          </div> 
+  </fieldset>
+
+   </div>
+   <br>
+   <fieldset>
+      <div class="down" ">
+         <ul>
+    <li><a href="#"><h1> Press "Enter" Key To Change Theme</h1></a> </li>
+   </ul>
+   </div>
+ </fieldset>
+ <br><br><br>
+  <!--- Add javascript file --->
+ <script>
+    document.onkeypress= function(e){
+       e = e||window.event;
+       if(e.keyCode=== 13){
+          document.documentElement.classList.toggle('dark-mode');
+          
+          document.querySelectorAll('.inverted').forEach((result) => {
+             result.classList.toggle('invert');
+          })
+       }
+    }
+    
+   
+ </script>
+  <script src="script.js"></script>
+  
+
+</body>
+</html>
